@@ -1,6 +1,6 @@
-function Blob() {
+function Blob(r) {
   this.pos = createVector(width/2, height/2);
-  this.r = 64;
+  this.r = r;
 
   this.show = function() {
     fill(255);
