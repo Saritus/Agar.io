@@ -12,9 +12,9 @@ function setup() {
 function draw() {
   background(0);
 
+  translate(width/2-blob.pos.x, height/2-blob.pos.y);
   blob.show();
   blob.update();
-  translate(width/2-blob.pos.x, height/2-blob.pos.y);
   for (var i = 0; i < blobs.length; i++) {
     blobs[i].show();
   }
