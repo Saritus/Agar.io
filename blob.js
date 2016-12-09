@@ -1,11 +1,13 @@
 function Blob(x, y, r) {
   this.pos = createVector(x, y);
   this.r = r;
+  this.vel = createVector(0, 0);
 
   this.update = function() {
-    var vel = createVector(mouseX-width/2, mouseY-height/2);
-    vel.setMag(3);
-    this.pos.add(vel);
+    var newvel = createVector(mouseX-width/2, mouseY-height/2);
+    newvel.setMag(3);
+    this.vel.lerp(newvel, 0.1);
+    this.pos.add(this.vel);
   }
 
   this.eats = function(other) {
