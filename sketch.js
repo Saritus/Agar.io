@@ -5,8 +5,8 @@ var zoom = 1;
 function setup() {
   createCanvas(500, 500);
   blob = new Blob(0, 0, 64);
-  for (var i = 0; i < 50; i++) {
-    blobs[i] = new Blob(random(-width, width), random(-height, height), 16);
+  for (var i = 0; i < 500; i++) {
+    blobs[i] = new Blob(random(-2*width, 2*width), random(-2*height, 2*height), 16);
   }
 }
 
