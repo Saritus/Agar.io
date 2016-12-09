@@ -1,5 +1,6 @@
 var blob;
 var blobs = [];
+var zoom = 1;
 
 function setup() {
   createCanvas(500, 500);
@@ -13,7 +14,11 @@ function draw() {
   background(0);
 
   translate(width/2, height/2);
-  scale(64 / blob.r);
+
+  var newzoom = 64 / blob.r;
+  zoom = lerp(zoom, newzoom, 0.1),
+
+  scale(zoom);
   translate(-blob.pos.x, -blob.pos.y);
 
 
