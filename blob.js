@@ -6,7 +6,7 @@ function Blob(x, y, r) {
   this.update = function() {
     var newvel = createVector(mouseX-width/2, mouseY-height/2);
     newvel.setMag(3);
-    this.vel.lerp(newvel, 0.1);
+    this.vel.lerp(newvel, 10/this.r);
     this.pos.add(this.vel);
   }
 
