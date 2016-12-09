@@ -1,9 +1,14 @@
+//var socket;
+
 var blob;
 var blobs = [];
 var zoom = 1;
 
 function setup() {
   createCanvas(500, 500);
+
+  //socket = io.connect('http://localhost:3000');
+
   blob = new Blob(0, 0, 64);
   for (var i = 0; i < 500; i++) {
     blobs[i] = new Blob(random(-2*width, 2*width), random(-2*height, 2*height), 16);
