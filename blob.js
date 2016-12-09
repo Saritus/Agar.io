@@ -1,5 +1,5 @@
-function Blob(r) {
-  this.pos = createVector(width/2, height/2);
+function Blob(x, y, r) {
+  this.pos = createVector(x, y);
   this.r = r;
 
   this.show = function() {

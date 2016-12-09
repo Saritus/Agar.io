@@ -3,9 +3,9 @@ var blobs = [];
 
 function setup() {
   createCanvas(500, 500);
-  blob = new Blob(64);
+  blob = new Blob(width/2, height/2, 64);
   for (var i = 0; i < 10; i++) {
-    blobs[i] = new Blob(16);
+    blobs[i] = new Blob(random(width), random(height), 16);
   }
 }
 
